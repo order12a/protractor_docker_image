@@ -1,7 +1,8 @@
 FROM node:slim
 MAINTAINER vladimir.uroshlev@gmail.com
 WORKDIR /tmp
-RUN npm install -g protractor@4.* mocha jasmine protractor-console-plugin && \
+RUN npm install -g protractor@4.* jasmine protractor-console-plugin && \
+    webdriver-manager clean && \
     webdriver-manager update && \
     apt-get update && \
     apt-get install -y xvfb wget openjdk-7-jre && \
