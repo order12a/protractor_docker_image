@@ -1,5 +1,5 @@
 FROM node:slim
-MAINTAINER j.ciolek@webnicer.com
+MAINTAINER vladimir.uroshlev@gmail.com
 WORKDIR /tmp
 RUN npm install -g protractor@4.* mocha jasmine protractor-console-plugin && \
     webdriver-manager update && \
