@@ -3,12 +3,13 @@
 
 Использование:
 Запускаем из деректории с проектом
-
+```
 docker run -it --privileged --rm --net=host -v /dev/shm:/dev/shm -v $(pwd):/protractor docker_image_with_protractor [protractor options]
-
+```
 В моем случае:
-
-"docker run -it --privileged --rm --net=host -v /dev/shm:/dev/shm -v $(pwd):/protractor docker-protractor:2.0 config.js"
+```
+docker run -it --privileged --rm --net=host -v /dev/shm:/dev/shm -v $(pwd):/protractor docker-protractor:2.0 config.js
+```
 
 [protractor options] я указывал config файл. Также можно использовать все commandline options для проктрактора, например baseUrl, specs и т.д..
 
@@ -18,6 +19,6 @@ docker run -it --privileged --rm --net=host -v /dev/shm:/dev/shm -v $(pwd):/prot
 - переходим в папку с склонированным проектом
 - читаем как собирается и ранится имадж с под докера
 - редактируем Dockerfile
-- собираем свой имадж, я собирал так - "docker build -t your_image_name ." Докер сам поймет что нужно брать докер файл. Важно! Не провтыкать в конце команды точку, иначе нифига не соберется  и придется долго чехлить что же не так. Ждем сборки, при необходимости ходим уже в сам имадж и правим что нам надо(оригинальный у меня ругался и не пускал...)
+- собираем свой имадж, я собирал так - `docker build -t your_image_name .` Докер сам поймет что нужно брать докер файл. Важно! Не провтыкать в конце команды точку, иначе нифига не соберется  и придется долго чехлить что же не так. Ждем сборки, при необходимости ходим уже в сам имадж и правим что нам надо(оригинальный у меня ругался и не пускал...)
 - запускаем тесты(описано выше)
 - Profit!
