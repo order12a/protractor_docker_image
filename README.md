@@ -5,7 +5,8 @@
 Запускаем из деректории с проектом
 
 docker run -it --privileged --rm --net=host -v /dev/shm:/dev/shm -v $(pwd):/protractor docker_image_with_protractor [protractor options]
-В моем случае: 
+В моем случае:
+
 "docker run -it --privileged --rm --net=host -v /dev/shm:/dev/shm -v $(pwd):/protractor docker-protractor:2.0 config.js"
 
 [protractor options] я указывал config файл. Также можно использовать все commandline options для проктрактора, например baseUrl, specs и т.д..
